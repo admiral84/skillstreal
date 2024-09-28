@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: column;
+  
+   
+  
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.up{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+.down{
+    height: 3px;
+    width: 100%;
+    background-color: grey;
+}
+.logo{
+    color:blue;
+    font-weight: bold;
+    font-size: 2rem;
+    
+}
+.hr{
+    display: block;
+    height: 3px;
+    width: 100%;
+    color:blueviolet;
+}

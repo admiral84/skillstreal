@@ -1,0 +1,33 @@
+.container{
+    height: calc(100vh - 3rem);
+    padding:1.5rem;
+}
+.etiquette{
+    display: flex;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.courBloc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px grey solid;
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 3px;
+    justify-content: center;
+}
+.titre{
+    font-weight: bold;
+}
+.accueil{
+    font-weight: bold;
+}
+.hl{
+    background-color: grey;
+    height: 3px;
+    width: 100%;
+    margin-top: 1.5rem;
+}

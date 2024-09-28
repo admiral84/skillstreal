@@ -1,0 +1,30 @@
+.container{
+display: flex;
+align-items: center;
+}
+.signinButton{
+color:blue;
+border-width: 1px;
+border-radius: 8px;
+border-color: blue;
+font-weight: 800;
+width: 80px;
+height: 35px;
+margin-left: .5rem;
+}
+.loginButton{
+color: blue;
+font-weight: 600;
+}
+.lien{
+    font-weight: 600;
+    background-color: blue;
+    margin: 0.5rem;
+    border-radius: 10px;
+    color:white;
+    height: 30px;
+    width: 50px;
+    align-items: center;
+    text-align: center;
+    
+}

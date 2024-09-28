@@ -1,0 +1,23 @@
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 4rem;
+    display: flex;
+    height: calc(100vh - 3rem);
+}
+.titre{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.parag{
+    font-size: 20px;
+    
+}
+.rightside{
+    width: 50%;
+    padding-left: 3rem;
+}
+.leftside{
+    width: 50%;
+}
