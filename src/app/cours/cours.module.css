@@ -21,6 +21,8 @@
 }
 .titre{
     font-weight: bold;
+    text-align: center;
+    height: 30px;
 }
 .accueil{
     font-weight: bold;
