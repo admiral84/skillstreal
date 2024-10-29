@@ -3,11 +3,20 @@ import styles from "./cours.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { getCours } from "../lib/data";
-
-const cour = await getCours();
-console.log(cour);
-console.log("Fetched courses:", cour);
-function AllCourses() {
+/*Fetching data with an api*/
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/cours");
+  if (!res.ok) {
+    throw new Error("something went wrong");
+  }
+  return res.json();
+};
+//fetching data without api
+//const cour = await getCours();
+//console.log(cour);
+//console.log("Fetched courses:", cour);
+const AllCourses = async () => {
+  const cour = await getData();
   return (
     <div className={styles.container}>
       <p className={styles.accueil}>commencer maintenant</p>
@@ -27,6 +36,6 @@ function AllCourses() {
       </div>
     </div>
   );
-}
+};
 
 export default AllCourses;

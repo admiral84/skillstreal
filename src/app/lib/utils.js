@@ -11,8 +11,8 @@ export const connectToDb = async (retries = 5, delay = 1000) => {
 
     console.log("Connecting to the database...");
     connection = await mongoose.connect(process.env.MONGO, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true,
     });
 
     console.log("Connected to the database");

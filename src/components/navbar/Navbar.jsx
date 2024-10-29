@@ -2,7 +2,10 @@ import React from "react";
 import styles from "./navbar.module.css";
 import Links from "./links/Links";
 import Link from "next/link";
-function Navbar() {
+import { auth } from "@/app/lib/auth";
+async function Navbar() {
+  const session = await auth();
+  console.log(session);
   return (
     <div className={styles.container}>
       <div className={styles.up}>
@@ -12,7 +15,7 @@ function Navbar() {
             <h1>skillstream</h1>
           </Link>
         </div>
-        <Links />
+        <Links session={session} />
       </div>
       <div className={styles.down}>
         <span className={styles.hr}></span>

@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./links.module.css";
 import Link from "next/link";
-function Links() {
+import { handleGithubLogin, handleGithubLogout } from "@/app/lib/action";
+function Links({ session }) {
   return (
     <div className={styles.container}>
       <Link href="/">
@@ -10,10 +11,21 @@ function Links() {
       <Link href="/cours">
         <div className={styles.lien}>cours</div>
       </Link>
-      <div className={styles.loginButton}>
-        <button>Log In</button>
-      </div>
-      <button className={styles.signinButton}>Sing In</button>
+      {!session && (
+        <div className={styles.loginButton}>
+          <Link href="/login">
+            <button>Log In</button>
+          </Link>
+          <button className={styles.signinButton}>Sing In</button>
+        </div>
+      )}
+      {session && (
+        <div className={styles.logoutButton}>
+          <form action={handleGithubLogout}>
+            <button>Log out</button>
+          </form>
+        </div>
+      )}
     </div>
   );
 }
